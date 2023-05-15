@@ -25,6 +25,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "cedbba7c-4130-423d-b3a3-895a59eb9bcb"
+      }
+    },
+    "owner": "mspaprika"
   }
 }
