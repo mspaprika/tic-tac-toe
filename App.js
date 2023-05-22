@@ -43,7 +43,6 @@ export default function App() {
 
   }, [board]);
 
-
   function checkWin() {
     for (let i = 0; i < winConditions.length; i++) {
       const [a, b, c] = winConditions[i];
@@ -67,7 +66,27 @@ export default function App() {
               });
               setOccupiedTiles([]);
               setTurn('X');
-
+            },
+          }]);
+        return;
+      } else if (occupiedTiles.length === 9) {
+        Alert.alert(`It's a tie!`, "Ready for revenge? \nYou have no choice anyway 😀", [
+          {
+            text: 'New Game',
+            onPress: () => {
+              setBoard({
+                top1: '',
+                top2: '',
+                top3: '',
+                mid1: '',
+                mid2: '',
+                mid3: '',
+                bot1: '',
+                bot2: '',
+                bot3: '',
+              });
+              setOccupiedTiles([]);
+              setTurn('X');
             },
           }]);
         return;
